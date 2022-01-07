@@ -55,6 +55,9 @@ namespace MouseUI
         //MySQL
         //MySqlConnection conn;
 
+        //Excel
+        Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG3.xlsx", 1);
+
         //----------變量end-----------
 
         public Form1()
@@ -272,7 +275,7 @@ namespace MouseUI
             //getppg_fromSTM();
             if (this.serialPort1.IsOpen)
             {
-                for(int i = 0; i < 10; i++) 
+                for(int i = 0; i < 4000; i++) 
                 { 
                     try
                     {
@@ -291,16 +294,13 @@ namespace MouseUI
 
                     }
                 }
-                for (int i = 0; i < 10; i++)
-                {
-                    WriteData(i,1, (WdataQueue1.ElementAt(i)).ToString());
-                    
-                }
+                WritePPGData();
                 progressBar2.Value = 100;
                 MessageBox.Show("儲存完畢");
+                excel1.close();
+                //File.Delete(@"D:\develop\VS2019\MouseUI\MouseUi\PPG4.xlsx");
 
             }
-
             else
                 MessageBox.Show("請初始化");
 
@@ -324,13 +324,29 @@ namespace MouseUI
             int row = i;
             int col = j;
             string Str = str;
-            Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG3.xlsx", 1);
+            
             excel1.WriteToCell(row, col, Str);
             excel1.Save();
             //excel1.SaveAs(@"D:\develop\VS2019\MouseUI\MouseUi\PPG2.xlsx");
 
             excel1.close();
 
+        }
+
+        public void WritePPGData()
+        {
+            Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG3.xlsx", 1);
+            for (int i = 0; i < 3000; i++)
+            {
+                int j = 1;
+                int row = i;
+                int col = j;
+                string Str = (WdataQueue1.ElementAt(i)).ToString();
+                excel1.WriteToCell(row, col, Str);
+                progressBar2.Value = i/300+1;
+            }
+            excel1.Save();
+            excel1.close();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

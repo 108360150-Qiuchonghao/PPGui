@@ -1,0 +1,8 @@
+https://www.cnblogs.com/wllhq/p/4370312.html
+
+http://www.360doc.com/content/19/0409/15/6889381_827474569.shtml
+
+
+chart1.Series["PPG"].XValueMember = "PPG";
+            chart1.Series["PPG"].YValueMembers = "rate";
+            chart1.Titles.Add("ppg訊號圖像");

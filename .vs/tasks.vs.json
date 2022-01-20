@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Form2",
+      "appliesTo": "MouseUI/Form2.cs",
+      "type": "launch"
+    }
+  ]
+}

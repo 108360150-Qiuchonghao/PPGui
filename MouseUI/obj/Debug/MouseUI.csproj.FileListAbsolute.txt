@@ -58,3 +58,5 @@ D:\develop\VS2019\MouseUI\MouseUI\MouseUI\bin\Debug\System.ValueTuple.dll
 D:\develop\VS2019\MouseUI\MouseUI\MouseUI\bin\Debug\CsvHelper.xml
 D:\develop\VS2019\MouseUI\MouseUI\MouseUI\obj\Debug\MouseUI.Form2.resources
 D:\develop\VS2019\MouseUI\MouseUI\MouseUI\obj\Debug\MouseUI.Form3.resources
+D:\ProjectUI\PPGui\MouseUI\obj\Debug\MouseUI.exe
+D:\ProjectUI\PPGui\MouseUI\obj\Debug\MouseUI.pdb

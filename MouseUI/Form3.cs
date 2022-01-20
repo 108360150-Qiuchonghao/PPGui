@@ -57,7 +57,7 @@ namespace MouseUI
                 new PPG{ ppg1 = 4, ppg2 = 5, ppg3 = 6},
             };
 
-            using (StreamWriter writer = new StreamWriter("D:\\develop\\VS2019\\MouseUI\\MouseUi\\ppg.csv"))
+            using (StreamWriter writer = new StreamWriter("D:\\ProjectUI\\rawdata.csv"))
             {
                 using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
                 {
@@ -109,7 +109,7 @@ namespace MouseUI
 
                     }
                 }
-                using (StreamWriter writer = new StreamWriter("D:\\develop\\VS2019\\MouseUI\\MouseUi\\ppg.csv"))
+                using (StreamWriter writer = new StreamWriter("D:\\ProjectUI\\rawdata.csv"))
                 {
                     using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
                     {

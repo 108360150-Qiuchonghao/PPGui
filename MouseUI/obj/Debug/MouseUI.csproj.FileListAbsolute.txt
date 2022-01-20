@@ -53,3 +53,5 @@ D:\develop\VS2019\MouseUI\MouseUi\MouseUI\bin\Debug\EPPlus.xml
 D:\develop\VS2019\MouseUI\MouseUi\MouseUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 D:\develop\VS2019\MouseUI\MouseUi\MouseUI\obj\Debug\MouseUI.csproj.ResolveComReference.cache
 D:\develop\VS2019\MouseUI\MouseUI\MouseUI\obj\Debug\MouseUI.csprojAssemblyReference.cache
+D:\ProjectUI\PPGui\MouseUI\obj\Debug\MouseUI.exe
+D:\ProjectUI\PPGui\MouseUI\obj\Debug\MouseUI.pdb

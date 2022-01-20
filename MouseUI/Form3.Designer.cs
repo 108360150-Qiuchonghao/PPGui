@@ -42,6 +42,7 @@ namespace MouseUI
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -82,16 +83,16 @@ namespace MouseUI
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(77, 64);
+            this.progressBar1.Location = new System.Drawing.Point(142, 64);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(121, 21);
+            this.progressBar1.Size = new System.Drawing.Size(56, 21);
             this.progressBar1.TabIndex = 4;
             // 
             // button_init
             // 
             this.button_init.Location = new System.Drawing.Point(12, 64);
             this.button_init.Name = "button_init";
-            this.button_init.Size = new System.Drawing.Size(59, 23);
+            this.button_init.Size = new System.Drawing.Size(124, 23);
             this.button_init.TabIndex = 5;
             this.button_init.Text = "初始化";
             this.button_init.UseVisualStyleBackColor = true;
@@ -128,15 +129,23 @@ namespace MouseUI
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 22);
             this.button1.TabIndex = 9;
-            this.button1.Text = "讀取500個訊號並且寫入";
+            this.button1.Text = "讀取1000個訊號並且寫入";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(12, 118);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(186, 23);
+            this.progressBar2.TabIndex = 10;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 289);
+            this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -169,5 +178,6 @@ namespace MouseUI
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ProgressBar progressBar2;
     }
 }

@@ -80,13 +80,16 @@ namespace MouseUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //要讀取的個數是num
+            int num = 1000;
             if (this.serialPort1.IsOpen)
             {
-                MessageBox.Show("正在讀取");
+                //MessageBox.Show("正在讀取");
+                //建立空的寫入csv的list
                 var records = new List<PPG>
                 {  };
-
-                for (int i = 0; i < 500; i++)
+                //讀取num個串口的信號
+                for (int i = 0; i < num; i++)
                 {
                     try
                     {
@@ -97,6 +100,8 @@ namespace MouseUI
                         int ppg2Value = int.Parse(ppgArray2[1]);
                         int ppg3Value = int.Parse(ppgArray2[2]);
                         records.Add(new PPG { ppg1 = ppg1Value, ppg2 = ppg2Value, ppg3 = ppg3Value });
+                        progressBar2.Value = i / 10;
+
                     }
                     catch
                     {

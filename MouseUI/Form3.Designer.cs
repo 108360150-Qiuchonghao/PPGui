@@ -37,7 +37,6 @@ namespace MouseUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button_init = new System.Windows.Forms.Button();
             this.button_write = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,16 +86,6 @@ namespace MouseUI
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(56, 21);
             this.progressBar1.TabIndex = 4;
-            // 
-            // button_init
-            // 
-            this.button_init.Location = new System.Drawing.Point(12, 64);
-            this.button_init.Name = "button_init";
-            this.button_init.Size = new System.Drawing.Size(124, 23);
-            this.button_init.TabIndex = 5;
-            this.button_init.Text = "初始化";
-            this.button_init.UseVisualStyleBackColor = true;
-            this.button_init.Click += new System.EventHandler(this.button_init_Click);
             // 
             // button_write
             // 
@@ -150,7 +139,6 @@ namespace MouseUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_write);
-            this.Controls.Add(this.button_init);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -173,7 +161,6 @@ namespace MouseUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button_init;
         private System.Windows.Forms.Button button_write;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;

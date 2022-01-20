@@ -22,10 +22,7 @@ namespace MouseUI
             findPorts();
         }
 
-        private void button_init_Click(object sender, EventArgs e)
-        {
-            Initport();
-        }
+       
 
 
 
@@ -80,14 +77,18 @@ namespace MouseUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Initport();
             //要讀取的個數是num
             int num = 1000;
+            progressBar2.Value = 0;
             if (this.serialPort1.IsOpen)
             {
                 //MessageBox.Show("正在讀取");
                 //建立空的寫入csv的list
                 var records = new List<PPG>
-                {  };
+                {  
+                
+                };
                 //讀取num個串口的信號
                 for (int i = 0; i < num; i++)
                 {
@@ -113,7 +114,9 @@ namespace MouseUI
                     using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
                     {
                         csv.WriteRecords(records);
+                        progressBar2.Value = 100;
                         MessageBox.Show("儲存完畢");
+                        serialPort1.Close();
                     }
                 }
                 //progressBar2.Value = 100;

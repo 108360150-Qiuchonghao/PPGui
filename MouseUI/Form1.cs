@@ -11,7 +11,7 @@ using System.IO.Ports;
 using System.IO;
 using OfficeOpenXml;
 using System.Windows.Forms.DataVisualization.Charting;
-
+using CsvHelper;
 //using NPOI;
 //using NPOI.HSSF.UserModel;
 //using NPOI.XSSF.UserModel;
@@ -56,7 +56,7 @@ namespace MouseUI
         //MySqlConnection conn;
 
         //Excel
-        // Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG3.xlsx", 1);
+         Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG.xlsx", 1);
 
         //csv初始化
 
@@ -274,45 +274,45 @@ namespace MouseUI
         private void button1_Click_1(object sender, EventArgs e)
         {
             
-            
-            
-            
-            
-            
+
+
+
+
+
             //之前写的excle，暂时放弃，使用csv去储存资料
-            //ppgtime = 0;
-            //label2.Text = "test1";
-            ////getppg_fromSTM();
-            //if (this.serialPort1.IsOpen)
-            //{
-            //    for(int i = 0; i < 4000; i++) 
-            //    { 
-            //        try
-            //        {
-            //            ppgtime++;
-            //            ppgString = serialPort1.ReadLine();
-            //            String[] ppgArray2 = ppgString.Split(':');
-            //            ppg1Value = int.Parse(ppgArray2[1]);
-            //            ppg2Value = int.Parse(ppgArray2[2]);
-            //            ppg3Value = int.Parse(ppgArray2[3]);
-            //            WdataQueue1.Enqueue(ppg1Value);
-            //            WdataQueue2.Enqueue(ppg2Value);
-            //            WdataQueue3.Enqueue(ppg3Value);
-            //        }
-            //        catch
-            //        {
+            ppgtime = 0;
+            label2.Text = "test1";
+            //getppg_fromSTM();
+            if (this.serialPort1.IsOpen)
+            {
+                for (int i = 0; i < 500; i++)
+                {
+                    try
+                    {
+                        ppgtime++;
+                        ppgString = serialPort1.ReadLine();
+                        String[] ppgArray2 = ppgString.Split(',');
+                        ppg1Value = int.Parse(ppgArray2[0]);
+                        ppg2Value = int.Parse(ppgArray2[1]);
+                        ppg3Value = int.Parse(ppgArray2[2]);
+                        WdataQueue1.Enqueue(ppg1Value);
+                        WdataQueue2.Enqueue(ppg2Value);
+                        WdataQueue3.Enqueue(ppg3Value);
+                    }
+                    catch
+                    {
 
-            //        }
-            //    }
-            //    WritePPGData();
-            //    progressBar2.Value = 100;
-            //    MessageBox.Show("儲存完畢");
-            //    excel1.close();
-            //    //File.Delete(@"D:\develop\VS2019\MouseUI\MouseUi\PPG4.xlsx");
+                    }
+                }
+                WritePPGData();
+                progressBar2.Value = 100;
+                MessageBox.Show("儲存完畢");
+                excel1.close();
+                //File.Delete(@"D:\develop\VS2019\MouseUI\MouseUi\PPG4.xlsx");
 
-            //}
-            //else
-            //    MessageBox.Show("請初始化");
+            }
+            else
+                MessageBox.Show("請初始化");
             //之前写的excle，暂时放弃，使用csv去储存资料
 
 
@@ -338,20 +338,20 @@ namespace MouseUI
             int col = j;
             string Str = str;
             
-            excel1.WriteToCell(row, col, Str);
-            excel1.Save();
+            //excel1.WriteToCell(row, col, Str);
+            //excel1.Save();
             //excel1.SaveAs(@"D:\develop\VS2019\MouseUI\MouseUi\PPG2.xlsx");
 
-            excel1.close();
+            //excel1.close();
 
         }
 
         public void WritePPGData()
         {
-            Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG3.xlsx", 1);
-            for (int i = 0; i < 3000; i++)
+            Excel excel1 = new Excel(@"D:\develop\VS2019\MouseUI\MouseUi\PPG.xlsx", 1);
+            for (int i = 0; i < 500; i++)
             {
-                int j = 1;
+                int j = int.Parse(this.textBox1.Text);
                 int row = i;
                 int col = j;
                 string Str = (WdataQueue1.ElementAt(i)).ToString();
@@ -465,6 +465,31 @@ namespace MouseUI
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        public class ppgvalve
+        { 
+            public int PPG1 { get; set; }
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void csvWriter_Click(object sender, EventArgs e)
+        {
+            //using (var writer = new StreamWriter("D:\develop\VS2019\MouseUI\MouseUi\ppg.csv"))
+            //using (var csv = new CsvWriter(writer))
+            //{
+            //    csv.WriteRecords(writeRecords);
+            //}
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

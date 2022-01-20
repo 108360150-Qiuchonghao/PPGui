@@ -72,7 +72,7 @@ namespace MouseUI
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(219, 12);
+            this.chart1.Location = new System.Drawing.Point(188, 12);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -209,7 +209,7 @@ namespace MouseUI
             // 
             // WriteExcel
             // 
-            this.WriteExcel.Location = new System.Drawing.Point(842, 12);
+            this.WriteExcel.Location = new System.Drawing.Point(795, 12);
             this.WriteExcel.Name = "WriteExcel";
             this.WriteExcel.Size = new System.Drawing.Size(183, 23);
             this.WriteExcel.TabIndex = 12;
@@ -223,7 +223,7 @@ namespace MouseUI
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(842, 41);
+            this.progressBar2.Location = new System.Drawing.Point(795, 41);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(100, 23);
             this.progressBar2.TabIndex = 13;
@@ -234,7 +234,7 @@ namespace MouseUI
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(219, 205);
+            this.chart2.Location = new System.Drawing.Point(188, 205);
             this.chart2.Name = "chart2";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -251,7 +251,7 @@ namespace MouseUI
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(219, 399);
+            this.chart3.Location = new System.Drawing.Point(188, 396);
             this.chart3.Name = "chart3";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
